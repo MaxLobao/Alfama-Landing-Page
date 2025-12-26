@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALFAMA WEB</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="_assets/css/style.css">
+</head>
+
+<body>
+  <!-- MENU SUPERIOR -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+
+        <a class="navbar-brand" href="#precatorios">
+          <img src="_assets/img/alfama-logo.png" alt="Alfama" class="navbar-logo">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#precatorios">Precatórios?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#empresa">A empresa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#como-funciona">Como funciona?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-cta btn-sm" href="tel:+5500000000000">
+                <span class="material-icons">call</span>
+                (00) 00000-0000
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- MOBILE SECTION SWITCHER -->
+      <div class="mobile-section-nav d-lg-none">
+        <button class="mobile-section-current" type="button" aria-expanded="false">
+          <span class="mobile-section-label">Precatórios?</span>
+          <span class="material-icons">expand_more</span>
+        </button>
+
+        <ul class="mobile-section-list">
+          <li><a href="#precatorios">Precatórios?</a></li>
+          <li><a href="#empresa">A empresa</a></li>
+          <li><a href="#como-funciona">Como funciona?</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!-- CABEÇALHO -->
+  <div class="hero-wrapper" id="heroWrapper">
+    <section class="hero" id="precatorios">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-lg-8">
+            <div class="hero-copy">
+              <h1 class="hero-title">
+                Lorem ipsum dolor sit amet.<br>
+                <strong>Nam vehicula enim dui.</strong>
+              </h1>
+
+              <p class="hero-subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Nam vehicula enim dui.<br>
+                Cras vitae euismod metus.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card form-card">
+              <div class="card-body form-card__body">
+
+                <h2 class="form-title">Precisa de nossa ajuda?</h2>
+                <p class="form-subtitle">Preencha o formulário abaixo e fale conosco</p>
+
+                <form id="contactForm" novalidate>
+
+                  <div class="field">
+                    <span class="field__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="field__svg"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.41 0-8 2-8 4.5V20h16v-1.5C20 16 16.41 14 12 14Z"/></svg>
+                    </span>
+                    <input class="field__control" id="name" name="name" type="text" placeholder="Nome" required minlength="3">
+                    <div class="invalid-feedback">Informe seu nome.</div>
+                  </div>
+
+                  <div class="field">
+                    <span class="field__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="field__svg"><path d="M15 5 9 3 3 5v16l6-2 6 2 6-2V3ZM9 5.15l6 2v11.7l-6-2ZM5 6.3l3-1v11.4l-3 1Zm14 11.4-3 1V7.15l3-1Z"/></svg>
+                    </span>
+                    <select class="field__control field__control--select" id="state" name="state" required>
+                      <option value="" selected disabled>Estado/UF</option>
+                      <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+                      <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+                      <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+                      <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                      <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+                      <option>SE</option><option>TO</option>
+                    </select>
+                    <div class="invalid-feedback">Selecione o estado.</div>
+                  </div>
+
+                  <div class="field">
+                    <span class="field__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="field__svg"><path d="M6.62 10.79a15.09 15.09 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.24 1.02Z"/></svg>
+                    </span>
+                    <input class="field__control" id="phone" name="phone" type="tel" placeholder="Telefone" required>
+                    <div class="invalid-feedback">Informe um telefone válido.</div>
+                  </div>
+
+                  <div class="field">
+                    <span class="field__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="field__svg"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
+                    </span>
+                    <input class="field__control" id="email" name="email" type="email" placeholder="E-mail" required>
+                    <div class="invalid-feedback">Informe um e-mail válido.</div>
+                  </div>
+
+                  <div class="field">
+                    <span class="field__icon field__icon--text" aria-hidden="true">R$</span>
+                    <input class="field__control" id="value" name="value" type="text" placeholder="Valor do precatório" required>
+                    <div class="invalid-feedback">Informe o valor do precatório.</div>
+                  </div>
+
+                  <div class="field">
+                    <input class="field__control field__control--plain" id="process" name="process" type="text" placeholder="Número do processo" required>
+                    <div class="invalid-feedback">Informe o número do processo.</div>
+                  </div>
+
+                  <label class="privacy">
+                    <input class="privacy__check" type="checkbox" id="privacy" name="privacy" required>
+                    <span class="privacy__box" aria-hidden="true"></span>
+                    <span class="privacy__text">Aceito a política de privacidade</span>
+                  </label>
+
+                  <button class="btn btn-cta btn-sm w-100" type="submit" id="btnSubmit">ENVIAR</button>
+                  <div class="form-alert mt-3 d-none" id="formAlert" role="alert"></div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- QUEM SOMOS -->
+  <section class="empresa" id="empresa">
+    <div class="container">
+
+      <h2 class="empresa__headline text-center">
+        Lorem ipsum dolor sit amet <span class="empresa__accent">consectetur</span>
+      </h2>
+
+      <!-- CARD 1 -->
+      <div class="empresa-card">
+        <div class="row g-0 align-items-stretch">
+
+          <!-- TEXTO -->
+          <div class="col-lg-6">
+            <div class="empresa-card__content h-100">
+              <h3 class="empresa-card__title">Quem Somos?</h3>
+
+              <p class="empresa-card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam vehicula enim dui. Cras vitae euismod metus. In
+                aliquam, urna posuere egestas dignissim, nulla dolor.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam vehicula enim dui. Cras vitae euismod metus. In
+                aliquam, urna posuere egestas dignissim, nulla dolor
+                pretium risus, ac imperdiet erat erat quis nibh. Quisque
+                viverra volutpat eros vitae vehicula. Pellentesque
+                tincidunt, lacus eu tincidunt finibus.
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam vehicula enim dui. Cras vitae euismod metus.
+                Pellentesque tincidunt, lacus eu tincidunt finibus.
+              </p>
+
+              <p class="empresa-card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+                Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim, nulla dolor
+                pretium risus, ac imperdiet erat erat quis nibh.
+              </p>
+
+              <p class="empresa-card__text mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+                Cras vitae euismod metus. Pellentesque tincidunt.
+              </p>
+            </div>
+          </div>
+
+          <!-- IMAGEM -->
+          <div class="col-lg-6">
+            <div class="empresa-card__media h-100">
+              <img class="empresa-card__img" src="_assets/img/img1.png" alt="Foto">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="empresa-card mt-4">
+        <div class="row g-0 align-items-stretch flex-lg-row-reverse">
+
+          <!-- TEXTO -->
+          <div class="col-lg-6">
+            <div class="empresa-card__content h-100">
+              <h3 class="empresa-card__title empresa-card__title--blue">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                nam vehicula enim dui.
+              </h3>
+
+              <p class="empresa-card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui. Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim, nulla dolor pretium risus, ac imperdiet erat erat quis nibh. Quisque viverra volutpat eros vitae vehicula. Pellentesque tincidunt, lacus eu tincidunt finibus, tellus quam dapibus quam, nec lacinia nunc nulla nec lectus. Nulla eleifend enim at justo tristique, vulputate convallis turpis vestibulum. Nunc eget magna non velit aliquet imperdiet quis egestas leo. Pellentesque tincidunt, lacus eu tincidunt finibus, tellus quam dapibus quam, nec lacinia nunc nulla nec lectus. Nulla eleifend enim at justo tristique, vulputate convallis turpis vestibulum. Nunc eget magna non velit aliquet imperdiet quis egestas leo.
+              </p>
+
+            </div>
+          </div>
+
+          <!-- IMAGEM -->
+          <div class="col-lg-6">
+            <div class="empresa-card__media h-100">
+              <img class="empresa-card__img" src="_assets/img/img2.png" alt="Foto">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container">
+
+      <h2 class="empresa__headline text-center">
+        Como funciona?
+      </h2>
+
+      <div class="como-funciona__grid">
+
+        <!-- Passo 1 -->
+        <div class="step-card">
+          <span class="step-pill">Passo 1: Lorem</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam vehicula enim dui.
+          </p>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="step-card">
+          <span class="step-pill">Passo 2: Lorem</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam vehicula enim dui.
+          </p>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="step-card">
+          <span class="step-pill">Passo 3: Lorem</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam vehicula enim dui.
+          </p>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="step-card">
+          <span class="step-pill">Passo 4: Lorem</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam vehicula enim dui.
+          </p>
+        </div>
+
+        <!-- Passo 5 (centralizado) -->
+        <div class="step-card step-card--center">
+          <span class="step-pill">Passo 5: Lorem</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam vehicula enim dui.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- POR QUE ESCOLHER -->
+  <section class="why" id="depoimentos">
+    <div class="container">
+
+      <h2 class="empresa__headline text-center">
+        Por que escolher <span class="empresa__accent">Esta empresa?</span>
+      </h2>
+
+      <div class="why__layout">
+
+        <!-- COL ESQUERDA: IMAGEM -->
+        <div class="empresa-card__media h-100">
+          <img class="empresa-card__img" src="_assets/img/img3.png" alt="Foto">
+        </div>
+
+        <!-- COL DIREITA: CARDS -->
+        <div class="why__cards">
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <span class="material-icons">thumb_up</span>
+            </div>
+            <div class="why-card__content">
+              <h3 class="why-card__title">Lorem Ipsum</h3>
+              <p class="why-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <span class="material-icons">lock</span>
+            </div>
+            <div class="why-card__content">
+              <h3 class="why-card__title">Lorem Ipsum</h3>
+              <p class="why-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <span class="material-icons">payments</span>
+            </div>
+            <div class="why-card__content">
+              <h3 class="why-card__title">Lorem Ipsum</h3>
+              <p class="why-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <span class="material-icons">directions_run</span>
+            </div>
+            <div class="why-card__content">
+              <h3 class="why-card__title">Lorem Ipsum</h3>
+              <p class="why-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+
+      <h2 class="empresa__headline text-center">
+        <span class="empresa__accent">Dúvidas</span> e perguntas <span class="empresa__accent">frequentes</span>
+      </h2>
+
+      <div class="faq-grid">
+
+        <!-- ITEM 1 (aberto no print) -->
+        <article class="faq-item is-open">
+          <button class="faq-head" type="button" aria-expanded="true">
+            <span class="faq-question">
+              Lorem ipsum dolor sit amet, consectetur a dipiscing elit.
+            </span>
+
+            <span class="faq-toggle" aria-hidden="true">
+              <span class="material-icons">north</span>
+            </span>
+          </button>
+
+          <div class="faq-body" role="region">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+              Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim, nulla dolor
+              pretium risus, ac imperdiet erat erat quis nibh.
+            </p>
+          </div>
+        </article>
+
+        <!-- ITEM 2 (aberto no print) -->
+        <article class="faq-item is-open">
+          <button class="faq-head" type="button" aria-expanded="true">
+            <span class="faq-question">
+              Lorem ipsum dolor sit amet, consectetur a dipiscing elit.
+            </span>
+
+            <span class="faq-toggle" aria-hidden="true">
+              <span class="material-icons">north</span>
+            </span>
+          </button>
+
+          <div class="faq-body" role="region">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+              Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim, nulla dolor
+              pretium risus, ac imperdiet erat erat quis nibh.
+            </p>
+          </div>
+        </article>
+
+        <!-- ITEM 3 -->
+        <article class="faq-item">
+          <button class="faq-head" type="button" aria-expanded="false">
+            <span class="faq-question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui. Cras vitae euismod metus.
+            </span>
+
+            <span class="faq-toggle is-outline" aria-hidden="true">
+              <span class="material-icons">south</span>
+            </span>
+          </button>
+
+          <div class="faq-body" role="region">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+              Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim.
+            </p>
+          </div>
+        </article>
+
+        <!-- ITEM 4 -->
+        <article class="faq-item">
+          <button class="faq-head" type="button" aria-expanded="false">
+            <span class="faq-question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui. Cras vitae euismod metus.
+            </span>
+
+            <span class="faq-toggle is-outline" aria-hidden="true">
+              <span class="material-icons">south</span>
+            </span>
+          </button>
+
+          <div class="faq-body" role="region">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+              Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim.
+            </p>
+          </div>
+        </article>
+
+        <!-- ITEM 5 -->
+        <article class="faq-item">
+          <button class="faq-head" type="button" aria-expanded="false">
+            <span class="faq-question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui. Cras vitae euismod metus.
+            </span>
+
+            <span class="faq-toggle is-outline" aria-hidden="true">
+              <span class="material-icons">south</span>
+            </span>
+          </button>
+
+          <div class="faq-body" role="region">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+              Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim.
+            </p>
+          </div>
+        </article>
+
+        <!-- ITEM 6 -->
+        <article class="faq-item">
+          <button class="faq-head" type="button" aria-expanded="false">
+            <span class="faq-question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui. Cras vitae euismod metus.
+            </span>
+
+            <span class="faq-toggle is-outline" aria-hidden="true">
+              <span class="material-icons">south</span>
+            </span>
+          </button>
+
+          <div class="faq-body" role="region">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula enim dui.
+              Cras vitae euismod metus. In aliquam, urna posuere egestas dignissim.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contato">
+    <div class="container">
+
+      <!-- LINHA PRINCIPAL -->
+      <div class="footer-top">
+
+        <!-- LOGO + CNPJ -->
+        <div class="footer-brand">
+          <img src="_assets/img/alfama-logo.png" alt="Alfama Web" class="footer-logo">
+          <span class="footer-cnpj">CNPJ: 00.000.000/0000-00</span>
+        </div>
+
+        <!-- TELEFONE -->
+        <div class="footer-item">
+          <div class="footer-item__title">Nosso Telefone</div>
+          <div class="footer-item__content">
+            <span class="material-icons footer-icon">call</span>
+            <a href="tel:+5500000000000">(00) 00000-0000</a>
+          </div>
+        </div>
+
+        <!-- ENDEREÇO -->
+        <div class="footer-item">
+          <div class="footer-item__title">Nosso Endereço</div>
+          <div class="footer-item__content">
+            <span class="material-icons footer-icon">location_on</span>
+            <span>
+              Lorem ipsum dolor sit amet am,<br>
+              nº 000 – Lorem ipsum dolor –<br>
+              Lorem/XX, CEP: 00.000-000
+            </span>
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="footer-item">
+          <div class="footer-item__title">Nosso E-mail</div>
+          <div class="footer-item__content">
+            <span class="material-icons footer-icon">mail</span>
+            <a href="mailto:contato@contatodeteste.com.br">
+              contato@contatodeteste.com.br
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BARRA INFERIOR -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom__content">
+        <span>
+          Copyright © 2024 - Todos os direitos reservados à
+          <strong>Esta Empresa.</strong>
+        </span>
+
+        <img src="_assets/img/alfama-logo.png" alt="Alfama Web" class="footer-mini-logo">
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/5500000000000"
+     target="_blank"
+     rel="noopener"
+     aria-label="Fale conosco pelo WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const alertBox = document.getElementById('formAlert');
+  const btn = document.getElementById('btnSubmit');
+
+  function onlyDigits(s){ return (s || "").replace(/\D/g,''); }
+
+  function showAlert(type, msg){
+    alertBox.className = 'form-alert mt-3 alert alert-' + type;
+    alertBox.textContent = msg;
+    alertBox.classList.remove('d-none');
+  }
+
+  function hideAlert(){ alertBox.classList.add('d-none'); }
+
+  function setLoading(isLoading){
+    btn.disabled = isLoading;
+    btn.textContent = isLoading ? 'ENVIANDO…' : 'ENVIAR';
+  }
+
+
+  // máscaras simples
+  const phone = document.getElementById('phone');
+  phone.addEventListener('input', () => {
+    const d = onlyDigits(phone.value).slice(0, 11);
+    let out = d;
+    if (d.length >= 2) out = `(${d.slice(0,2)}) ${d.slice(2)}`;
+    if (d.length >= 7) out = `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+    phone.value = out;
+  });
+
+  const value = document.getElementById('value');
+  value.addEventListener('input', () => {
+    const d = onlyDigits(value.value);
+    if (!d) { value.value = ""; return; }
+    const num = (parseInt(d, 10) / 100).toFixed(2);
+    value.value = num.replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  });
+
+  // validação extra
+  function validateExtraRules(){
+    let ok = true;
+
+    const name = document.getElementById('name');
+    const process = document.getElementById('process');
+    const phoneEl = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const state = document.getElementById('state');
+    const valueEl = document.getElementById('value');
+    const privacy = document.getElementById('privacy');
+
+    if ((name.value || '').trim().length < 3) { name.setCustomValidity('invalid'); ok = false; }
+    else name.setCustomValidity('');
+
+    if ((process.value || '').trim().length < 5) { process.setCustomValidity('invalid'); ok = false; }
+    else process.setCustomValidity('');
+
+    if (onlyDigits(phoneEl.value).length < 10) { phoneEl.setCustomValidity('invalid'); ok = false; }
+    else phoneEl.setCustomValidity('');
+
+    if (!state.value) { state.setCustomValidity('invalid'); ok = false; }
+    else state.setCustomValidity('');
+
+    const emailVal = (email.value || '').trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
+    if (!emailOk) { email.setCustomValidity('invalid'); ok = false; }
+    else email.setCustomValidity('');
+
+    if (onlyDigits(valueEl.value).length < 1) { valueEl.setCustomValidity('invalid'); ok = false; }
+    else valueEl.setCustomValidity('');
+
+    if (!privacy.checked) { privacy.setCustomValidity('invalid'); ok = false; }
+    else privacy.setCustomValidity('');
+
+    return ok;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    hideAlert();
+
+    validateExtraRules();
+
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      showAlert('warning', 'Revise os campos destacados.');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch('mail/mail.php', {
+        method: 'POST',
+        body: formData,
+        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      });
+
+      const data = await res.json().catch(() => null);
+      if (!data) throw new Error('Resposta inválida.');
+
+      if (data.ok) {
+        form.reset();
+        form.classList.remove('was-validated');
+        showAlert('success', data.message || 'Mensagem enviada com sucesso!');
+      } else {
+        showAlert('danger', data.message || 'Não foi possível enviar. Verifique os campos.');
+
+        if (data.field_errors) {
+          Object.keys(data.field_errors).forEach((field) => {
+            const el = form.querySelector(`[name="${field}"]`);
+            if (el) {
+              el.classList.add('is-invalid');
+              const fb = el.parentElement?.querySelector('.invalid-feedback');
+              if (fb) fb.textContent = data.field_errors[field];
+            }
+          });
+        }
+      }
+    } catch (err) {
+      showAlert('danger', 'Erro ao enviar. Verifique sua hospedagem e tente novamente.');
+    } finally {
+      setLoading(false);
+    }
+  });
+
+  form.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('input', () => el.classList.remove('is-invalid'));
+    el.addEventListener('change', () => el.classList.remove('is-invalid'));
+  });
+</script>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  const hero = document.getElementById('heroWrapper');
+
+  function updateHeaderOpacity() {
+    const heroRect = hero.getBoundingClientRect();
+    const heroHeight = hero.offsetHeight;
+
+    /*
+      heroRect.top:
+        0    => hero começa no topo
+      < 0   => já estamos rolando dentro do hero
+    */
+
+    const scrolledInHero = Math.min(
+      Math.max(-heroRect.top, 0),
+      heroHeight
+    );
+
+    // progresso de 0 → 1
+    const progress = scrolledInHero / heroHeight;
+
+    // limite de opacidade (fica mais bonito não ir a 1 antes de sair do hero)
+    const opacity = Math.min(progress * 1.15, 1);
+
+    header.style.backgroundColor = `rgba(10, 62, 108, ${opacity})`;
+
+    // sombra só quando já está praticamente sólido
+    if (opacity > 0.85) {
+      header.classList.add('has-shadow');
+    } else {
+      header.classList.remove('has-shadow');
+    }
+  }
+
+  window.addEventListener('scroll', updateHeaderOpacity, { passive: true });
+  window.addEventListener('resize', updateHeaderOpacity);
+
+  // estado inicial
+  updateHeaderOpacity();
+</script>
+
+<script>
+  document.querySelectorAll('.faq-item .faq-head').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.toggle('is-open');
+
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      const toggle = item.querySelector('.faq-toggle');
+      const icon = toggle.querySelector('.material-icons');
+
+      if (isOpen) {
+        toggle.classList.remove('is-outline');
+        icon.textContent = 'north';
+      } else {
+        toggle.classList.add('is-outline');
+        icon.textContent = 'south';
+      }
+    });
+  });
+</script>
+
+<script>
+  // ===== ScrollSpy com IntersectionObserver (link ativo pela seção visível) =====
+  const headerEl = document.getElementById('siteHeader');
+  const navLinks = Array.from(document.querySelectorAll('.navbar-nav .nav-link[href^="#"]'));
+
+  const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  function setActiveLinkById(id){
+    navLinks.forEach(a => {
+      const isActive = a.getAttribute('href') === `#${id}`;
+      a.classList.toggle('active', isActive);
+      a.setAttribute('aria-current', isActive ? 'page' : 'false');
+    });
+
+    // 🔹 SINCRONIZA COM O MENU MOBILE
+    if (window.syncMobileSection) {
+      window.syncMobileSection(id);
+    }
+  }
+
+
+  // offset do header fixo
+  function getHeaderOffset(){
+    return (headerEl?.offsetHeight || 80) + 8; // +8 “folga”
+  }
+
+  // observa entradas/saídas das seções
+  let observer;
+  function setupObserver(){
+    if (observer) observer.disconnect();
+
+    const offset = getHeaderOffset();
+
+    observer = new IntersectionObserver((entries) => {
+      // pega as seções que estão visíveis
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length){
+        setActiveLinkById(visible[0].target.id);
+      }
+    }, {
+      root: null,
+      // “empurra” a área útil pra baixo por causa do header fixo
+      rootMargin: `-${offset}px 0px -55% 0px`,
+      threshold: [0.15, 0.25, 0.35, 0.5]
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
+
+  // scroll suave ao clicar (mantém o offset do header)
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+
+      e.preventDefault();
+
+      const top = window.scrollY + target.getBoundingClientRect().top - getHeaderOffset();
+
+      window.scrollTo({ top, behavior: 'smooth' });
+
+      // fecha menu no mobile após clicar
+      const bsCollapse = document.getElementById('mainNav');
+      if (bsCollapse && bsCollapse.classList.contains('show')) {
+        const collapseInstance = bootstrap.Collapse.getOrCreateInstance(bsCollapse);
+        collapseInstance.hide();
+      }
+    });
+  });
+
+  // inicializa
+  setupObserver();
+  window.addEventListener('resize', () => setupObserver());
+
+  // estado inicial (se entrar direto com hash)
+  if (location.hash) {
+    const id = location.hash.replace('#','');
+    const sec = document.getElementById(id);
+    if (sec) setActiveLinkById(id);
+  } else if (sections[0]) {
+    setActiveLinkById(sections[0].id);
+  }
+</script>
+
+<script>
+  const mobileNav = document.querySelector('.mobile-section-nav');
+  const mobileCurrent = document.querySelector('.mobile-section-current');
+  const mobileLabel = document.querySelector('.mobile-section-label');
+  const mobileLinks = document.querySelectorAll('.mobile-section-list a');
+
+  if (mobileNav && mobileCurrent) {
+
+    // abre/fecha dropdown
+    mobileCurrent.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      mobileCurrent.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // clique nos links
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+
+        // scroll com offset do header
+        const headerOffset = document.getElementById('siteHeader')?.offsetHeight || 80;
+        const top = window.scrollY + target.getBoundingClientRect().top - headerOffset;
+
+        window.scrollTo({ top, behavior: 'smooth' });
+
+        // atualiza label
+        mobileLabel.textContent = link.textContent;
+
+        // fecha dropdown
+        mobileNav.classList.remove('is-open');
+        mobileCurrent.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // sincroniza com o scrollspy (quando a seção muda)
+    function syncMobileLabel(sectionId){
+      const link = document.querySelector(`.mobile-section-list a[href="#${sectionId}"]`);
+      if (link) mobileLabel.textContent = link.textContent;
+    }
+
+    // expõe função global pra integrar com o script anterior
+    window.syncMobileSection = syncMobileLabel;
+  }
+</script>
+
+
+
+</body>
+</html>
