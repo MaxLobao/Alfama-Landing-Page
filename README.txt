@@ -2,8 +2,8 @@
 
 ## Estrutura
 - index.html
-- _assets/css/style.css
-- _assets/libs/bootstrap/  (VOCÊ PRECISA COPIAR O BOOTSTRAP AQUI)
+- assets/css/style.css
+- assets/libs/bootstrap/  (VOCÊ PRECISA COPIAR O BOOTSTRAP AQUI)
 - mail/mail.php
 
 ## Como rodar no seu local
@@ -18,16 +18,16 @@
 
 ## Bootstrap local (requisito do teste)
 Este projeto aponta para:
-- _assets/libs/bootstrap/css/bootstrap.min.css
-- _assets/libs/bootstrap/js/bootstrap.bundle.min.js
+- assets/libs/bootstrap/css/bootstrap.min.css
+- assets/libs/bootstrap/js/bootstrap.bundle.min.js
 
 Como você está baixando este ZIP aqui, eu não consigo embutir os arquivos oficiais do Bootstrap automaticamente.
 Então faça assim:
 
 1) Baixe o Bootstrap 5 (dist) no site oficial
 2) Copie os arquivos para:
-   _assets/libs/bootstrap/css/bootstrap.min.css
-   _assets/libs/bootstrap/js/bootstrap.bundle.min.js
+   assets/libs/bootstrap/css/bootstrap.min.css
+   assets/libs/bootstrap/js/bootstrap.bundle.min.js
 
 ### Alternativa rápida (somente para teste)
 No index.html já deixei um CDN comentado.
