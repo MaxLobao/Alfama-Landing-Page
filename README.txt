@@ -3,39 +3,142 @@
 ## Estrutura
 - index.html
 - assets/css/style.css
-- assets/libs/bootstrap/  (VOCÊ PRECISA COPIAR O BOOTSTRAP AQUI)
+- assets/libs/bootstrap/ 
 - mail/mail.php
 
-## Como rodar no seu local
-1) Abra a pasta no terminal e rode:
-   php -S localhost:8000
+Arquivos Principais
+index.html
 
-2) Acesse no navegador:
-   http://localhost:8000/index.html
+Arquivo principal da aplicação. Contém toda a estrutura da landing page, organizada em seções:
 
-> IMPORTANTE: abrir o arquivo com duplo clique (file://) pode quebrar o AJAX.
-> Use sempre um servidor local (php -S, XAMPP, WAMP, Laragon).
+Header fixo
 
-## Bootstrap local (requisito do teste)
-Este projeto aponta para:
-- assets/libs/bootstrap/css/bootstrap.min.css
-- assets/libs/bootstrap/js/bootstrap.bundle.min.js
+Navegação com destaque da seção ativa (scrollspy customizado)
 
-Como você está baixando este ZIP aqui, eu não consigo embutir os arquivos oficiais do Bootstrap automaticamente.
-Então faça assim:
+Menu responsivo com collapse no mobile
 
-1) Baixe o Bootstrap 5 (dist) no site oficial
-2) Copie os arquivos para:
-   assets/libs/bootstrap/css/bootstrap.min.css
-   assets/libs/bootstrap/js/bootstrap.bundle.min.js
+Hero
 
-### Alternativa rápida (somente para teste)
-No index.html já deixei um CDN comentado.
-Você pode descomentar o CDN para testar rapidamente e depois voltar pro modo local.
+Apresentação principal + formulário de contato
 
-## Email (PHP mail())
-- Em mail/mail.php, troque:
-  $to = 'contato@contatodeteste.com.br';
+Empresa
 
-- O envio depende do servidor ter suporte a mail().
-  Em localhost, pode não funcionar sem SMTP configurado.
+Seções institucionais com cards e imagens
+
+Como funciona
+
+Etapas do processo em cards
+
+Por que escolher
+
+Diferenciais com ícones e textos
+
+FAQ
+
+Accordion customizado com animação e comportamento responsivo
+
+Footer
+
+Informações de contato, endereço e marca
+
+WhatsApp flutuante
+
+Botão fixo de conversão
+
+Também inclui scripts JavaScript responsáveis por:
+
+Scroll suave com offset do header
+
+Destaque automático do menu conforme a seção visível
+
+Comportamento do FAQ (abrir/fechar)
+
+Validação e envio do formulário via AJAX
+
+Controle visual do header conforme o scroll
+
+assets/css/style.css
+
+Arquivo central de estilos do projeto.
+
+Responsável por:
+
+Tokens de design (cores, espaçamentos, radius)
+
+Estilização global (tipografia, background)
+
+Layout e responsividade
+
+Header transparente com comportamento dinâmico
+
+Cards, grids e seções
+
+FAQ animado e responsivo
+
+Footer e botão flutuante do WhatsApp
+
+Todo o CSS foi escrito de forma customizada, utilizando Bootstrap apenas como base estrutural.
+
+assets/img/
+
+Contém todas as imagens utilizadas no projeto:
+
+Logotipo da empresa
+
+Imagens institucionais
+
+Background do hero
+
+mail/mail.php
+
+Arquivo responsável pelo processamento do formulário de contato.
+
+Recebe os dados via POST (AJAX)
+
+Realiza validações básicas
+
+Retorna respostas em formato JSON
+
+Pode ser integrado facilmente a serviços de e-mail ou CRM
+
+🧩 Tecnologias Utilizadas
+
+HTML5
+
+CSS3 (customizado)
+
+Bootstrap 5.3
+
+JavaScript (Vanilla)
+
+Google Fonts (Poppins)
+
+Google Material Icons
+
+Font Awesome
+
+PHP (envio de formulário)
+
+📱 Responsividade
+
+O projeto foi desenvolvido com abordagem mobile-first, incluindo:
+
+Menu colapsável com fundo próprio no mobile
+
+Header fixo adaptado para telas menores
+
+FAQ que expande empurrando o conteúdo (sem sobreposição)
+
+Botão de WhatsApp sempre acessível
+
+🚀 Objetivo do Projeto
+
+Esta landing page foi construída para:
+
+Apresentação institucional clara
+
+Alta conversão via formulário e WhatsApp
+
+Navegação fluida por seções
+
+Fácil manutenção e escalabilidade
