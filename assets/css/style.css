@@ -33,7 +33,7 @@ html, body{
 
 .site-header .navbar{
   min-height: var(--header-h);
-  padding: .55rem 0;
+  padding: 20px 0;
 }
 
 .site-header .nav-link{
@@ -429,11 +429,10 @@ html, body{
 }
 
 .faq-item{
-  position: relative;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  overflow: visible;
+  overflow: hidden; /* agora pode ser hidden, porque não vai sobrepor */
 }
 
 .faq-item.is-open{
@@ -490,32 +489,17 @@ html, body{
 }
 
 .faq-body{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(22px + 46px);
-  background: #fff;
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.10);
-  z-index: 2;
-
-  display: block;
-  opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
-
-  transition: opacity .22s ease, transform .26s ease, max-height .35s ease;
-  padding: 0 20px;
+  transition: max-height .35s ease, opacity .2s ease;
+  padding: 0 22px; /* mantém alinhamento com o head */
 }
 
 .faq-item.is-open .faq-body{
+  max-height: 420px; /* ajustável (depende do tamanho do texto) */
   opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  max-height: 260px;
-  padding: 0 20px 20px 20px;
+  padding: 0 22px 22px;
 }
 
 .faq-item.is-open .faq-toggle{
@@ -608,177 +592,61 @@ html, body{
   width: auto;
 }
 
-.whatsapp-float{
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  z-index: 9999;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  text-decoration: none;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.whatsapp-float i{
-  font-size: 30px;
-  line-height: 1;
-}
-
-.whatsapp-float:hover{
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
-}
-
-.whatsapp-float:focus-visible{
-  outline: 3px solid rgba(255,255,255,.6);
-  outline-offset: 4px;
-}
+.whatsapp-float{ position: fixed; right: 30px; bottom: 30px; z-index: 9999; width: 56px; height: 56px; border-radius: 50%; background: #25d366; color: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+.whatsapp-float i{ font-size: 30px; line-height: 1; }
+.whatsapp-float:hover{ transform: translateY(-4px) scale(1.05); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3); }
+.whatsapp-float:focus-visible{ outline: 3px solid rgba(255,255,255,.6); outline-offset: 4px; }
 
 @media (max-width: 991px){
+
+  .site-header{
+    background: rgba(10, 62, 108, .98);
+  }
+
+  /* ✅ Fundo fixo do dropdown do menu */
+  #mainNav{
+    background: rgba(10, 62, 108, .98);
+    padding: 12px 14px;
+    margin-top: 10px;
+  }
+
+  /* espaçamento e alinhamento melhor no mobile */
+  #mainNav .navbar-nav{
+    gap: 8px !important;
+    align-items: flex-start !important;
+  }
+
+  #mainNav .nav-link{
+    padding: 10px 8px;
+  }
+
+  /* opcional: CTA ocupar largura */
+  #mainNav .btn-cta{
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
+  }
   .hero{ padding-top: 2rem; }
-
-  .como-funciona__grid{
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
+  .como-funciona__grid{ grid-template-columns: 1fr; gap: 36px; }
   .step-card{ padding: 44px 26px 28px; }
-
   .step-card--center{ max-width: 100%; }
-
   .step-pill{ left: 22px; }
-
   .why__layout{ grid-template-columns: 1fr; }
-
   .why-card{ padding: 18px; }
-
   .why-card__icon{ width: 48px; height: 48px; }
-
   .why-card__icon .material-icons{ font-size: 34px; }
-
   .faq-section{ padding: 60px 0 70px; }
-
-  .faq-grid{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
+  .faq-grid{grid-template-columns: 1fr; gap: 18px; }
   .faq-question{ font-size: 1rem; }
-
-  .faq-body{
-    position: static;
-    box-shadow: none;
-    border-radius: 0 0 18px 18px;
-    padding: 0 22px;
-  }
-
-  .faq-item.is-open .faq-body{
-    max-height: 500px;
-    padding: 0 22px 20px;
-  }
-
-  .footer-top{
-    grid-template-columns: 1fr;
-    gap: 26px;
-    text-align: left;
-  }
-
-  .footer-bottom__content{
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
+  .faq-body{ position: static; box-shadow: none; border-radius: 0 0 18px 18px; padding: 0 22px; }
+  .faq-item.is-open .faq-body{ max-height: 500px; padding: 0 22px 20px; }
+  .footer-top{ grid-template-columns: 1fr; gap: 26px; text-align: left; }
+  .footer-bottom__content{ flex-direction: column; gap: 10px; text-align: center; }
 }
 
 @media (max-width: 575px){
-  .form-card__body{
-    padding: 20px 18px 18px;
-  }
+  .form-card__body{ padding: 20px 18px 18px; }
   .form-title{ font-size: 1.25rem; }
-
-  .whatsapp-float{
-    width: 52px;
-    height: 52px;
-    right: 16px;
-    bottom: 16px;
-  }
-
-  .whatsapp-float i{
-    font-size: 26px;
-  }
-}
-/* =========================
-   MOBILE SECTION NAV
-========================= */
-.mobile-section-nav{
-  position: relative;
-}
-
-.mobile-section-current{
-  width: 100%;
-  background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.25);
-  color: #fff;
-  border-radius: 14px;
-  padding: 10px 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  font-weight: 500;
-  font-size: .95rem;
-  cursor: pointer;
-}
-
-.mobile-section-current .material-icons{
-  transition: transform .25s ease;
-}
-
-/* lista */
-.mobile-section-list{
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
-
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.2);
-
-  list-style: none;
-  padding: 6px 0;
-  margin: 0;
-
-  display: none;
-  z-index: 9999;
-}
-
-.mobile-section-list li a{
-  display: block;
-  padding: 12px 16px;
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: .95rem;
-}
-
-.mobile-section-list li a:hover{
-  background: #f3f6fb;
-}
-
-/* aberto */
-.mobile-section-nav.is-open .mobile-section-list{
-  display: block;
-}
-
-.mobile-section-nav.is-open .material-icons{
-  transform: rotate(180deg);
+  .whatsapp-float{ width: 52px; height: 52px; right: 16px; bottom: 16px; }
+  .whatsapp-float i{ font-size: 26px; }
 }
